@@ -23,10 +23,10 @@ function GenerateNeopet() {
 }
 
 export default function App() {
-  const [inputcolor, setinputcolor] = useState();
+  // const [inputcolor, setinputcolor] = useState();
   const [neopet,setneopet]=useState(GenerateNeopet())
   const color = neopet.color;
-  const gradient = background[inputcolor || color];
+  const gradient = background[color];
   function loadneopet(){
     setneopet(GenerateNeopet())
   }

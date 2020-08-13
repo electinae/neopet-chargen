@@ -7,7 +7,7 @@ import background from "./backgrounds";
 
 function pickrandom(values) {
   var count = values.length;
-  var randomindex = Math.floor(Math.random() * (count - 1));
+  var randomindex = Math.round(Math.random() * count);
   return values[randomindex];
 }
 

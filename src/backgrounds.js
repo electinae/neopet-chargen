@@ -1,4 +1,3 @@
-import { formatDiagnosticsWithColorAndContext } from "typescript";
 
 export default {
   "8-bit": "rgb(92,0,174), rgb(65,180,220), rgb(115,255,111",

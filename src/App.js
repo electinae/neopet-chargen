@@ -24,16 +24,19 @@ function GenerateNeopet() {
 
 export default function App() {
   const [inputcolor, setinputcolor] = useState();
-  const newNeopet = GenerateNeopet();
-  const color = newNeopet.color;
+  const [neopet,setneopet]=useState(GenerateNeopet())
+  const color = neopet.color;
   const gradient = background[inputcolor || color];
+  function loadneopet(){
+    setneopet(GenerateNeopet())
+  }
 
-  return (
+    return (
     <div
       className="container"
       style={{ background: `linear-gradient(${gradient})` }}
     >
-      <select
+      {/* <select
         value={inputcolor}
         onChange={(event) => setinputcolor(event.target.value)}
       >
@@ -41,8 +44,10 @@ export default function App() {
         {data.color.map((color) => (
           <option value={color}>{color}</option>
         ))}
-      </select>
-      <Neopet {...newNeopet} />
+      </select> */}
+       <div className="center"><button onClick={loadneopet}>Pet me!</button></div>
+      <Neopet {...neopet} />
+     
     </div>
   );
 }
